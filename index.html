@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentManager 🏠</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">RentManager</div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="warning-banner">
+            <div class="warning-content">
+                <span class="material-icons warning-icon">warning</span>
+                <div class="warning-text">
+                    <strong>Important Information</strong>
+                    <button class="expand-btn" onclick="toggleWarning()">
+                        <span class="material-icons">expand_more</span>
+                    </button>
+                </div>
+            </div>
+            <div class="warning-details" id="warningDetails">
+                <p>This application has been primarily tested on Android 10 and newer versions.<br>
+                    <strong>It works perfectly on Android 13 and newer devices.</strong>
+                </p>
+                <p>There is no guarantee of full compatibility with all devices or older Android versions.<br>
+                    We are actively working to improve compatibility across more devices — thank you for your patience
+                    and understanding.</p>
+            </div>
+        </div>
+
+        <section class="hero">
+            <h1 class="title">RentManager 🏠</h1>
+            <p class="subtitle">Powerful rental property management • Clean & modern design • Made with care</p>
+            <button class="download-btn" onclick="openDownloadModal()">
+                <span class="material-icons">download</span>
+                Download Latest APK
+            </button>
+        </section>
+
+        <section class="features">
+            <h2 class="section-title">Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="material-icons feature-icon">palette</span>
+                    <h3>Modern & Clean UI</h3>
+                    <p>Soft colors, smooth animations, beautiful dark mode design</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="material-icons feature-icon">speed</span>
+                    <h3>Very Lightweight</h3>
+                    <p>Fast startup, small size, no unnecessary permissions</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="material-icons feature-icon">home</span>
+                    <h3>Property Management</h3>
+                    <p>Multiple properties • tenants • leases • maintenance tracking</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="material-icons feature-icon">payment</span>
+                    <h3>Payment Tracking</h3>
+                    <p>Rent collection • payment history • due date reminders</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="material-icons feature-icon">analytics</span>
+                    <h3>Financial Reports</h3>
+                    <p>Income tracking, expense management, profit analysis</p>
+                </div>
+
+                <div class="feature-card">
+                    <span class="material-icons feature-icon">notifications</span>
+                    <h3>Smart Notifications</h3>
+                    <p>Rent reminders, lease expiry alerts, maintenance updates</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Made with care by <strong>TAQI</strong> • 2025–2026</p>
+    </footer>
+
+    <!-- Download Modal -->
+    <div class="modal" id="downloadModal">
+        <div class="modal-content">
+            <h3>Ready to download RentManager?</h3>
+            <div class="download-info">
+                <p><strong>Version</strong> 1.0.0</p>
+                <p><strong>File size</strong> 45.50 MB</p>
+                <p>Direct download • No registration • GitHub Releases</p>
+            </div>
+            <div class="modal-actions">
+                <a href="https://github.com/Mark-IT-Studio/rent_management/releases/download/1.0.0/app-debug.apk"
+                    class="modal-download-btn">
+                    <span class="material-icons">file_download</span>
+                    Start Download
+                </a>
+                <button class="modal-cancel-btn" onclick="closeDownloadModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="modalOverlay" onclick="closeDownloadModal()"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
